@@ -11,19 +11,6 @@ public class Account {
     }
 
     public synchronized void sub(int num){
-        /*if (numberAccount > 50000){
-            numberAccount -= num;
-            System.out.println("Đã rút " + num);
-
-        }
-        else{
-            System.out.println("Số dư phải lớn hơn 50000!");
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }*/
         if (numberAccount < 50000){
             System.out.println("Số dư phải lớn hơn 50000!");
             try {
