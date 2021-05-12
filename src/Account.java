@@ -2,9 +2,6 @@ public class Account {
     private int numberAccount = 0;
 
     public synchronized void add(int num){
-        if (numberAccount == 0){
-
-        }
         numberAccount += num;
         System.out.println("Đã nộp vào " + num);
         notify();
