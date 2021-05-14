@@ -25,16 +25,17 @@ public class TestRunnable {
 ///newSingleThreadExecutor() Chỉ cho chạy 1 thread trong CT
         // Khai báo 10 Runnable, và "quăng" chúng vào Thread Pool vừa khai báo
         for (int i = 1; i <= 10; i++) {
-            MyRunnable myRunnable = new MyRunnable("Runnable " + i);
+            //MyRunnable myRunnable = new MyRunnable("Runnable " + i);
+            Student student = new Student("Callable " + i);
             //executorService.execute(myRunnable);//submit(myRunnable)
-            Future future = executorService.submit(myRunnable);
+            Future future = executorService.submit(student);
             listFuture.add(future);
         }
         /*================================================*/
         for (Future future : listFuture) {
             try {
                 // Khi Thread nào kết thúc, get() của Future tương ứng sẽ trả về null
-                System.out.println(future.get());
+                System.out.println(future.get() + " kết thúc");
             } catch (ExecutionException | InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
