@@ -23,8 +23,3 @@ public class Account {
     }
 }
 //t1 và t2 cùng chờ sẽ xảy ra deadlock
-//thread pool
-// hạn chế sl Thread chạy đồng thời trong chương trình
-// Có bao nhiêu Thread cũng được nhưng chỉ "giới hạn" 1 lúc chạy bao nhiêu
-//thread cố định
-//Công việc của thread pool là start các thread theo kịch bản
