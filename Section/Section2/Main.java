@@ -1,3 +1,7 @@
+package Section2;
+
+import Section2.Account;
+
 public class Main {
     public static void main(String[] args) {
         Account acc = new Account();
