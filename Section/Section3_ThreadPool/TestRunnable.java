@@ -9,11 +9,11 @@ import java.util.concurrent.Future;
 
 public class TestRunnable {
     //https://yellowcodebooks.com/2019/09/16/java-bai-49-thread-pool-tap-2-executors-executor-va-executorservice/
-//thread pool
-// hạn chế sl Thread chạy đồng thời trong chương trình
-// Có bao nhiêu Thread cũng được nhưng chỉ "giới hạn" 1 lúc chạy bao nhiêu
-//thread cố định
-//Công việc của thread pool là start các thread theo kịch bản
+    //thread pool
+    // hạn chế sl Thread chạy đồng thời trong chương trình
+    // Có bao nhiêu Thread cũng được nhưng chỉ "giới hạn" 1 lúc chạy bao nhiêu
+    //thread cố định
+    //Công việc của thread pool là start các thread theo kịch bản
     public static void main(String[] args) {
         // Khai báo một Thread Pool thông qua newSingleThreadExecutor() của Executors
         /*======================================================================*/
@@ -45,5 +45,7 @@ public class TestRunnable {
         //t1 chạy nếu f1.get = null thì t1 chạy xong rồi
         // Phương thức này sẽ được nói sau ở ExecutorService
         executorService.shutdown();//Giải phóng ThreadPool
+        //invokeany : 1 cái kết thúc là kết thúc
+        //invokeall : thực hiện tất cả rồi kết thúc
     }
 }
